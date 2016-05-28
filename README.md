@@ -1,4 +1,4 @@
-# Twitter News Web App
+# Twitter News
 ## Goal
 Create a simple application that is guided by the microservices concept. The application will provide a simple web-based user interface that lets users view 10 recent tweets from one of three topics (let's use "healthcare," "nasa," and "open source" as the topics) that will be served by the microservice API.
 

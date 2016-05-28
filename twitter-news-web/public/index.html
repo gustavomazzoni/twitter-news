@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Twitter News</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body ng-app="twitterNews">
+	    <div class="row">
+	    	<div class="col-md-6 col-md-offset-3">
+
+	    		<div class="page-header text-center">
+		          <h1>Twitter News</h1>
+		          <span>Choose the topic to see recent tweets</span>
+		        </div>
+
+		        <ui-view></ui-view>
+
+		    </div>
+	    </div>
+
+	    <script type="text/ng-template" id="/home.html">
+    	  	<ul class="nav nav-pills nav-justified">
+  				<li ng-repeat="topic in main.topics" role="presentation" ui-sref-active="active">
+	    	        <a ui-sref="home({topic: topic})">{{ topic }}</a>
+			    </li>
+			</ul>
+		
+			<div class="media list-group-item" ng-repeat="tweet in main.tweets">
+			  <div class="media-left">
+			    <a>
+			      <img class="media-object" ng-src="{{tweet.user.profile_image_url}}" height="60">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			  	<h4 class="media-heading">{{tweet.user.name}}</h4>
+			    {{tweet.text}}
+			  </div>
+			</div>
+		</script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+		<!-- Load environment config module -->
+		<script src="js/config.js"></script>
+		<!-- Load AngularJS application -->
+		<script src="js/app.js"></script>
+  </body>
+</html>

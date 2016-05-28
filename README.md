@@ -10,6 +10,50 @@ Following the microservices architecture, both the webapp and the api are indepe
 * [Detail information about the client side web app (twitter-news-web) and how to run it can be found here.](/twitter-news-web)
 * [Detail information about the server side microservice RESTful API (latest-tweets-api) and how to run it can be found here.](/latest-tweets-api)
 
+## Running the app
+### Download the project
+Download or clone the project with the following command:
+```sh
+$ git clone https://github.com/gustavomazzoni/twitter-news
+```
+### Rails RESTful API
+#### Install
+To install Twitter Gem, it's necessary to install first on the shell.
+```sh
+$ gem install twitter
+```
+Install project dependencies
+```sh
+$ bundle install
+```
+#### Configure
+Twitter API v1.1 requires you to authenticate via OAuth, so you'll need to [register your application with Twitter](https://apps.twitter.com/).
+
+Then, set the environment variables Consumer Key (API Key) as TWITTER_CONSUMER_KEY and Consumer Secret (API Secret) as TWITTER_CONSUMER_SECRET. For example, on MacOS:
+```sh
+$ export TWITTER_CONSUMER_KEY=<API Key>
+$ export TWITTER_CONSUMER_SECRET=<API Secret>
+```
+#### Run
+Start the server
+```sh
+$ rails server
+```
+### AngularJS Webapp
+#### Install
+Install project dependencies
+```sh
+$ npm install
+```
+#### Run
+Build and start the project
+```sh
+$ npm run build
+$ npm start
+```
+
+Open on your browser:
+http://localhost:8765/
 
 ### Demo
 https://twitternews.herokuapp.com

@@ -18,10 +18,7 @@ Gems:
 
 ## Running the application
 ### Download the project
-Download or clone the project using following command:
-```sh
-$ git clone https://github.com/gustavomazzoni/
-```
+Download the project
 ### Install
 To install Twitter Gem, it's necessary to install first on the shell.
 ```sh

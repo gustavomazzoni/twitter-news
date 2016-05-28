@@ -5,8 +5,8 @@ Create a simple application that is guided by the microservices concept. The app
 ## Solution
 A single-page application was built using [AngularJS](https://angularjs.org/), for the client side, consuming a microservice RESTful API, built in Ruby on Rails, that makes the integration to the external Twitter API to get for the most 10 recent tweets from a topic informed.
 
-* [Detail information about the client side web app can be found here.](tree/master/twitter-news-web)
-* [Detail information about the server side microservice RESTful API can be found here.](tree/master/latest-tweets-api)
+* [Detail information about the client side web app can be found here.](/twitter-news-web)
+* [Detail information about the server side microservice RESTful API can be found here.](/latest-tweets-api)
 
 
 ### Demo

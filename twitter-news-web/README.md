@@ -1,4 +1,4 @@
-# Twitter News
+# Twitter News Web App
 ## Goal
 Create a simple web-based client-side app that let's users view 10 recent tweets from one of three topics ("healthcare", "nasa", and "open source"). This frontend will simply ask a user which topic in which she wishes to see recent tweets, query the service for that topic, then show the results.
 

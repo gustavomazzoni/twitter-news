@@ -6,6 +6,7 @@ Create a [microservice](http://martinfowler.com/articles/microservices.html) tha
 ## Solution
 * Rails framework to build a microservice exposed through RESTful API.
 * For handling the communication with Twitter API was used the Twitter Ruby Gem.
+* Assign the twitter client, with the API keys, to a global variable in an initializer (config/initializers/twitter.rb).
 * Cache with Rails.cache to store the recent results from Twitter API during 1 hour. This aproach was adopted because it minimizes a lot the external API calls and reduces the response process time.
 * To deal with everything related with request and response (use JBuilder to build response object) for this API was created Api::V1::RecentTweetsController representing the API interface for it's first version.
 * JBuilder was used to build JSON response object with only few properties like the tweet's text and user's name and image profile.

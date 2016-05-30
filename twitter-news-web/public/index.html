@@ -18,10 +18,10 @@
 		    </div>
 	    </div>
 
-	    <script type="text/ng-template" id="/home.html">
+	    <script type="text/ng-template" id="/topic.html">
     	  	<ul class="nav nav-pills nav-justified">
   				<li ng-repeat="topic in main.topics" role="presentation" ui-sref-active="active">
-	    	        <a ui-sref="home({topic: topic})">{{ topic }}</a>
+	    	        <a ui-sref="topics({topic: topic})">{{ topic }}</a>
 			    </li>
 			</ul>
 		

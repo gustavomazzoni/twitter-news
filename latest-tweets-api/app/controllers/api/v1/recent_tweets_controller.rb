@@ -12,7 +12,8 @@ class Api::V1::RecentTweetsController < ApplicationController
 		@tweets = Rails.cache.fetch("/recent_tweets/#{params[:topic]}", :expires_in => 1.hours) do
 			# Search for tweets. This query will return the 10 most recent tweets from one of three topics.
 			# "healthcare", "nasa", and "open source" as the topics
-			$twitter.search("\"#{params[:topic]}\"", result_type: "recent").take(10)
+			# Use Twitter client object initialized in twitter_client initializer
+			TwitterClient.search("\"#{params[:topic]}\"", result_type: "recent").take(10)
 		end
 	end
 

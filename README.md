@@ -16,6 +16,7 @@ Download or clone the project with the following command:
 ```sh
 $ git clone https://github.com/gustavomazzoni/twitter-news
 ```
+### Vagrant setup
 This project has Vagrant setup files. So if you use Vagrant and would like to setup your environment with it, just run ```vagrant up``` and follow the next steps.
 
 ### Rails RESTful API

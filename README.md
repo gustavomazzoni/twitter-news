@@ -16,7 +16,10 @@ Download or clone the project with the following command:
 ```sh
 $ git clone https://github.com/gustavomazzoni/twitter-news
 ```
+This project has Vagrant setup files. So if you use Vagrant and would like to setup your environment with it, just run ```vagrant up``` and follow the next steps.
+
 ### Rails RESTful API
+Inside latest-tweets-api folder:
 #### Install
 To install Twitter Gem, it's necessary to install first on the shell.
 ```sh
@@ -31,8 +34,12 @@ Twitter API v1.1 requires you to authenticate via OAuth, so you'll need to [regi
 
 Then, set the environment variables Consumer Key (API Key) as TWITTER_CONSUMER_KEY and Consumer Secret (API Secret) as TWITTER_CONSUMER_SECRET. For example, on MacOS:
 ```sh
-$ export TWITTER_CONSUMER_KEY=<API Key>
-$ export TWITTER_CONSUMER_SECRET=<API Secret>
+$ echo 'export TWITTER_CONSUMER_KEY=<API Key>' >> ~/.bash_profile
+$ echo 'export TWITTER_CONSUMER_SECRET=<API Secret>' >> ~/.bash_profile
+```
+* Remember to refresh the shell after that:
+```sh
+$ source ~/.bash_profile
 ```
 #### Run
 Start the server
@@ -40,6 +47,7 @@ Start the server
 $ rails server
 ```
 ### AngularJS Webapp
+Inside twitter-news-web folder:
 #### Install
 Install project dependencies
 ```sh
